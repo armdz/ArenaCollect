@@ -14,6 +14,8 @@ The software creates a new composition called COMPO_NAME_collect.avc, and a "sou
 Made with http://openframeworks.cc
 Works on : macOs and Windows
 
+MacOs : https://github.com/armdz/ArenaCollect/releases/download/v1.0/ArenaCollect_osx.zip
+
 http://armdz.com
 
 
