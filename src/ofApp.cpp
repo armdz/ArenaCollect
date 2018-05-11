@@ -107,7 +107,11 @@ void ofApp::process_composition(bool    _write)
                     video_clip.destination_path = destination_folder+"/sources/"+short_name;
                     video_clip.source_path = composition.getAttribute("source", "name", "");
                     video_clip.clip_index = clip_index;
-                    files_to_copy.push_back(video_clip);
+                    
+                    ofFile  temp_file = ofFile(video_clip.source_path);
+                    if(temp_file.exists()){
+                        files_to_copy.push_back(video_clip);
+                    }
                 }else{
                     //  write the xml
                     if(composition.setAttribute("source", "name", files_to_copy.at(clip_index).destination_path,files_to_copy.at(clip_index).clip_index))
